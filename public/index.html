@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Sauchuk Maze Race</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Corn Maze QR Race</h1>
+        <p class="subtitle">race.sauchukmaze.com</p>
+      </header>
+
+      <section class="card controls">
+        <div class="timer" id="timer">00:00</div>
+        <button id="startButton" class="btn btn-primary">Start</button>
+        <button id="scanButton" class="btn btn-accent" disabled>Scan checkpoint</button>
+        <button id="stopScannerButton" class="btn btn-secondary" hidden>Stop scanner</button>
+      </section>
+
+      <section class="card" id="statusCard">
+        <h2>Status</h2>
+        <p id="statusMessage">Ready to race. Scan START to begin.</p>
+      </section>
+
+      <section class="card">
+        <h2>Progress</h2>
+        <ul id="progressList" class="progress-list"></ul>
+      </section>
+
+      <section class="card" id="scannerCard" hidden>
+        <h2>Scanner</h2>
+        <div id="scannerViewport"></div>
+      </section>
+
+      <section class="card" id="completionCard" hidden>
+        <h2>Run complete</h2>
+        <p id="completionTime"></p>
+        <label for="playerName">Name for leaderboard</label>
+        <input id="playerName" type="text" maxlength="20" autocomplete="name" placeholder="Your name" />
+        <button id="submitRunButton" class="btn btn-primary">Submit score</button>
+        <p id="submitStatus"></p>
+      </section>
+
+      <section class="card">
+        <h2>Today Top 10</h2>
+        <table>
+          <thead><tr><th>#</th><th>Name</th><th>Time</th><th>When</th></tr></thead>
+          <tbody id="todayBoard"></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>All-time Top 10</h2>
+        <table>
+          <thead><tr><th>#</th><th>Name</th><th>Time</th><th>When</th></tr></thead>
+          <tbody id="alltimeBoard"></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Demo Mode</h2>
+        <p>Desktop test buttons (camera not required)</p>
+        <div id="demoButtons" class="demo-grid"></div>
+        <button id="resetButton" class="btn btn-secondary">Reset run</button>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

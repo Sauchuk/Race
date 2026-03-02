@@ -1,0 +1,147 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  --bg: #f6f9e8;
+  --card: #ffffff;
+  --text: #1f2f16;
+  --primary: #2e7d32;
+  --accent: #f57c00;
+  --secondary: #37474f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.subtitle {
+  opacity: 0.8;
+  margin-top: 0.25rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  padding: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.timer {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 800;
+  text-align: center;
+}
+
+.btn {
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1rem;
+  min-height: 56px;
+  font-weight: bold;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+}
+
+.btn-primary {
+  background: var(--primary);
+}
+
+.btn-accent {
+  background: var(--accent);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+}
+
+.progress-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.progress-list li {
+  border: 2px solid #d8e2b8;
+  border-radius: 10px;
+  padding: 0.65rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.progress-list li.done {
+  border-color: var(--primary);
+  background: #e8f5e9;
+}
+
+#scannerViewport {
+  width: 100%;
+  min-height: 280px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  border-bottom: 1px solid #dde2cf;
+  text-align: left;
+  padding: 0.5rem 0.3rem;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.demo-grid button {
+  border: 1px solid #c8d4b0;
+  border-radius: 10px;
+  background: #edf3dd;
+  color: var(--text);
+  padding: 0.8rem;
+  font-weight: 700;
+}
+
+input {
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 2px solid #cad7b5;
+}
+
+@media (min-width: 800px) {
+  .app {
+    padding: 1.5rem;
+  }
+}
