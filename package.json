@@ -1,0 +1,13 @@
+{
+  "name": "sauchuk-maze-race",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mobile-first QR race web app for race.sauchukmaze.com",
+  "scripts": {
+    "dev": "vercel dev",
+    "rotate:tokens": "node tools/rotate_tokens.js"
+  },
+  "dependencies": {
+    "@vercel/kv": "^2.0.0"
+  }
+}
